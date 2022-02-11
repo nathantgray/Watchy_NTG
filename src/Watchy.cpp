@@ -21,7 +21,7 @@ void Watchy::init(String datetime){
     // Init the display here for all cases, if unused, it will do nothing
     display.init(0, displayFullInit, 10, true); // 10ms by spec, and fast pulldown reset
     display.epd2.setBusyCallback(displayBusyCallback);
-
+    Serial.begin(115200);
     switch (wakeup_reason)
     {
         case ESP_SLEEP_WAKEUP_EXT0: //RTC Alarm
