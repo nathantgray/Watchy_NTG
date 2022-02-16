@@ -34,6 +34,7 @@ void Watchy::init(String datetime){
             handleButtonPress();
             break;
         default: //reset
+            Serial.println("***************RESETING!****************");
             RTC.config(datetime);
             _bmaConfig();
             RTC.read(currentTime);
@@ -546,10 +547,11 @@ void Watchy::showAccelerometer(){
 }
 
 void Watchy::showWatchFace(bool partialRefresh){
-  display.setFullWindow();
-  drawWatchFace();
-  display.display(partialRefresh); //partial refresh
-  guiState = WATCHFACE_STATE;
+    RTC.read(currentTime);
+    display.setFullWindow();
+    drawWatchFace();
+    display.display(partialRefresh); //partial refresh
+    guiState = WATCHFACE_STATE;
 }
 
 void Watchy::drawWatchFace(){

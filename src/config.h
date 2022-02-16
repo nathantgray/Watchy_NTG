@@ -1,7 +1,8 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-
+//
+#define HAPTIC_TIME 30
 //pins
 #define SDA 21
 #define SCL 22
@@ -37,6 +38,8 @@
 #define MAIN_MENU_STATE 0
 #define APP_STATE 1
 #define FW_UPDATE_STATE 2
+#define TEST_APP_STATE 11
+#define TEST2_APP_STATE 12
 #define MENU_HEIGHT 25
 #define MENU_LENGTH 7
 //set time

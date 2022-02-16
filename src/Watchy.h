@@ -57,13 +57,13 @@ class Watchy {
         void showAbout();
         void showBuzz();
         void showAccelerometer();
-        void showUpdateFW();
+        static void showUpdateFW();
         void showSyncNTP();
         bool syncNTP();
         bool syncNTP(long gmt, int dst, String ntpServer);
         void setTime();
         void setupWifi();
-        bool connectWiFi();
+        static bool connectWiFi();
         weatherData getWeatherData();
         weatherData getWeatherData(String cityID, String units, String lang, String url, String apiKey, uint8_t updateInterval);
         void updateFWBegin();
